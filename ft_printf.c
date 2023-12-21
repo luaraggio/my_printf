@@ -6,18 +6,31 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 21:19:00 by lraggio           #+#    #+#             */
-/*   Updated: 2023/12/19 19:19:44 by lraggio          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:01:43 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static void	ft_printformat(va_list args, char *s)
+static unsigned int	convert_format(va_list args, const char *s)
 {
+	if (*s == 'c')
+		return (ft_printchar(va_arg(args, int));
 	if (*s == 's')
-		ft_printstring(*s);
+		return (ft_printstring(va_arg(args, int));
 	if (*s == 'p')
-		ft_printpointer();
+		return (ft_printpointer(va_arg(args, int));
+	if (*s == 'i')
+		return (ft_printdecimal());
+	if (*s == 'd')
+		return (ft_printinteger());
+	if (*s == 'u')
+		return (ft_printun());
+	if (*s == 'x')
+		return (ft_printx());
+	if (*s == 'X')
+		return (ft_printX());
+	return (0);
 }  
 
 int	ft_printf(const char *s, ...)
@@ -38,7 +51,7 @@ int	ft_printf(const char *s, ...)
 			}
 			else if (s[i + 1] != '%')
 			{
-				ft_printformat(*s);
+				convert_format(*s);
 			}
 			i++;
 		}

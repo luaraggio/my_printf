@@ -6,7 +6,7 @@
 #    By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 20:23:28 by lraggio           #+#    #+#              #
-#    Updated: 2023/12/19 18:46:08 by lraggio          ###   ########.fr        #
+#    Updated: 2023/12/21 15:50:31 by lraggio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS = 	ft_printchar.c\
 	ft_printf.c\
-	ft_prints.c\
-	ft_printp.c\
-	ft_printd.c\
-	ft_printi.c\
+	ft_printstring.c\
+	ft_printpointer.c\
+	ft_printdecimal.c\
+	ft_printinteger.c\
 	ft_printu.c\
 	ft_printx.c\
 	ft_printX.c\
