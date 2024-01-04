@@ -16,16 +16,15 @@ COMPILER = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = 	ft_printchar.c\
+SRCS = 	ft_print_char.c\
 	ft_printf.c\
-	ft_printstring.c\
-	ft_printpointer.c\
-	ft_printdecimal.c\
-	ft_printinteger.c\
-	ft_printu.c\
-	ft_printx.c\
-	ft_printX.c\
-	ft_printpercent.c\
+	ft_print_string.c\
+	ft_print_pointer.c\
+	ft_print_decimal.c\
+	ft_print_un.c\
+	ft_print_x.c\
+	ft_print_X.c\
+	ft_print_percent.c\
 
 OBJS = $(SRCS:.c=.o)
 

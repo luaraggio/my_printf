@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prints.c                                        :+:      :+:    :+:   */
+/*   ft_print_hexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:43:34 by lraggio           #+#    #+#             */
-/*   Updated: 2023/12/21 15:43:35 by lraggio          ###   ########.fr       */
+/*   Created: 2024/01/04 18:21:25 by lraggio           #+#    #+#             */
+/*   Updated: 2024/01/04 18:31:01 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_printstring(char *s)
+int	ft_print_x(unsigned int n)
 {
 	int	i;
+	char	*x;
 
-	i = 0;
-	while (*s)
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
+	x = ft_print_utoa(n, 16, "0123456789abcdef");
+	i = ft_print_string(x);
+	free(x);
+	return (i);
+}
+
+int	ft_print_X(unsigned int n)
+{
+	int	i;
+	char	*x;
+
+	x = ft_print_utoa(n, 16, "0123456789ABCDEF");
+	i = ft_print_string(x);
+	free(x);
 	return (i);
 }

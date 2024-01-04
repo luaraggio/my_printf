@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:44:01 by lraggio           #+#    #+#             */
-/*   Updated: 2023/12/21 15:47:35 by lraggio          ###   ########.fr       */
+/*   Created: 2023/12/21 15:43:34 by lraggio           #+#    #+#             */
+/*   Updated: 2024/01/04 17:44:19 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
-# include <stdarg.h>
-# include <unistd.h>
+#include "printf.h"
 
-int	ft_printpercent(void);
-int	ft_printchar(char *c);
-int	ft_printstring(char *s);
+int	ft_print_string(char *s)
+{
+	int	i;
 
-#endif
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (*s)	
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
+}

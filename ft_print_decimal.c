@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pointer.c                                       :+:      :+:    :+:   */
+/*   ft_print_decimal.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 19:40:25 by lraggio           #+#    #+#             */
-/*   Updated: 2023/12/19 19:41:54 by lraggio          ###   ########.fr       */
+/*   Created: 2024/01/04 18:35:11 by lraggio           #+#    #+#             */
+/*   Updated: 2024/01/04 18:36:45 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_pointer(void *pointer)
+int	ft_print_decimal(int dec)
 {
-	ft_pointer
+	int		i;
+	char	*s;
+
+	i = 0;
+	str = ft_itoa_base(dec, 10, "0123456789");
+	i += ft_print_string(s);
+	free(s);
+	return (i);
 }
