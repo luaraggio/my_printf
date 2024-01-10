@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 21:19:00 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 22:03:24 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 22:57:13 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	convert_format(va_list args, char c)
 	else if (c == 'u')
 		len += ft_print_un(va_arg(args, unsigned long));
 	else if (c == 'x')
-		len += ft_print_x(va_arg(args, unsigned int));
+		len += ft_print_lowerx(va_arg(args, unsigned int));
 	else if (c == 'X')
-		len += ft_print_X(va_arg(args, unsigned int));
+		len += ft_print_upperx(va_arg(args, unsigned int));
 	else if (c == '%')
 		len += write(1, "%", 1);
 	return (len);
@@ -38,24 +38,36 @@ int	convert_format(va_list args, char c)
 
 int	ft_printf(const char *s, ...)
 {
-	int	len;
-	int	i;
-	va_list args;
+	int		len;
+	int		i;
+	va_list	args;
 
 	i = 0;
 	len = 0;
 	va_start(args, s);
-	while (*s)
+	while (s[i])
 	{
 		if (s[i] == '%')
 		{
-				len += convert_format(args, s[i + 1]);
-				i++;
+			len += convert_format(args, s[i + 1]);
+			i++;
 		}
 		else
+		{
 			len += write(1, &s[i], 1);
+		}
 		i++;
 	}
 	va_end(args);
 	return (len);
 }
+
+/*int main()
+{	
+	//int i;
+	//int a;
+
+	ft_printf("isso é um  %d ", 1);
+
+
+}*/

@@ -6,15 +6,15 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:47:58 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 18:08:27 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 22:55:23 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_un(unsigned long n)
+int	ft_print_un(unsigned int n)
 {
-	int	i;
+	int		i;
 	char	*s;
 
 	i = 0;

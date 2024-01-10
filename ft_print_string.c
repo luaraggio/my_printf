@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 15:43:34 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 18:08:42 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 22:51:01 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_print_string(char *s)
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (*s)	
+	while (s[i])
 	{
 		write(1, &s[i], 1);
 		i++;

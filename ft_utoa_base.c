@@ -6,13 +6,13 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 17:09:07 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 20:25:58 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 22:49:40 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	size_base(unsigned long n, int base)
+static size_t	size_base(unsigned long long n, int base)
 {
 	size_t	size;
 
@@ -27,10 +27,10 @@ static size_t	size_base(unsigned long n, int base)
 	return (size);
 }
 
-char	*ft_utoa_base(unsigned long n, int base, char *buffer)
+char	*ft_utoa_base(unsigned long long n, int base, char *buffer)
 {
 	char	*str;
-	int	len;
+	int		len;
 
 	len = size_base(n, base);
 	str = (char *)malloc(sizeof (char) * (len + 1));

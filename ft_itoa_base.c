@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:56:13 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 21:49:45 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 23:09:04 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ static int	ft_is_negative(long *n)
 
 char	*ft_itoa_base(int n, int base, char *s)
 {
-	long		nn;
-	char		*dest;
+	char	*dest;
+	long	nn;
 	int		i;
 	int		sign;
 

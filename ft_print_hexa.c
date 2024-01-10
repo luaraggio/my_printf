@@ -6,15 +6,15 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:21:25 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 20:32:56 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 22:54:51 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_x(unsigned int n)
+int	ft_print_lowerx(unsigned int n)
 {
-	int	i;
+	int		i;
 	char	*x;
 
 	x = ft_utoa_base(n, 16, "0123456789abcdef");
@@ -23,9 +23,9 @@ int	ft_print_x(unsigned int n)
 	return (i);
 }
 
-int	ft_print_X(unsigned int n)
+int	ft_print_upperx(unsigned int n)
 {
-	int	i;
+	int		i;
 	char	*x;
 
 	x = ft_utoa_base(n, 16, "0123456789ABCDEF");
