@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_utoa.c                                    :+:      :+:    :+:   */
+/*   ft_utoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 17:09:07 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/04 18:13:17 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 20:25:58 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	size_base(unsigned long n, int base)
 	return (size);
 }
 
-char	*ft_print_utoa(unsigned long n, int base, char *buffer)
+char	*ft_utoa_base(unsigned long n, int base, char *buffer)
 {
 	char	*str;
 	int	len;

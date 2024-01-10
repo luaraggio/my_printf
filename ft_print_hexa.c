@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:21:25 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/04 18:31:01 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 20:32:56 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_print_x(unsigned int n)
 	int	i;
 	char	*x;
 
-	x = ft_print_utoa(n, 16, "0123456789abcdef");
+	x = ft_utoa_base(n, 16, "0123456789abcdef");
 	i = ft_print_string(x);
 	free(x);
 	return (i);
@@ -28,7 +28,7 @@ int	ft_print_X(unsigned int n)
 	int	i;
 	char	*x;
 
-	x = ft_print_utoa(n, 16, "0123456789ABCDEF");
+	x = ft_utoa_base(n, 16, "0123456789ABCDEF");
 	i = ft_print_string(x);
 	free(x);
 	return (i);

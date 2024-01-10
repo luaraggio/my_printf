@@ -6,11 +6,11 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:56:13 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/04 19:53:49 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 21:49:45 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static	int	ft_counter(long nbr, int base)
 {
@@ -26,7 +26,7 @@ static	int	ft_counter(long nbr, int base)
 		return (1);
 	while (nbr > 0)
 	{
-		nbr = nbr / 10;
+		nbr = nbr / base;
 		counter++;
 	}
 	return (counter);
@@ -42,7 +42,7 @@ static int	ft_is_negative(long *n)
 	return (0);
 }
 
-char	*ft_itoa(int n, int base, char *s)
+char	*ft_itoa_base(int n, int base, char *s)
 {
 	long		nn;
 	char		*dest;
@@ -50,7 +50,7 @@ char	*ft_itoa(int n, int base, char *s)
 	int		sign;
 
 	nn = n;
-	i = ft_counter(nn);
+	i = ft_counter(nn, base);
 	dest = (char *)malloc(sizeof(char) * (i + 1));
 	if (!dest)
 		return (NULL);

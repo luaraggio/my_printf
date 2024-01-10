@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printchar.c                                     :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 15:42:15 by lraggio           #+#    #+#             */
-/*   Updated: 2023/12/21 15:42:17 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 20:13:26 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int    ft_printc(char *c)
+int    ft_print_char(char c)
 {
     write(1, &c, 1);
     return(1);

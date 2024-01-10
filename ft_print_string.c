@@ -6,11 +6,11 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 15:43:34 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/04 17:44:19 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 18:08:42 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_print_string(char *s)
 {

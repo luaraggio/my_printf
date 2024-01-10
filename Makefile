@@ -6,7 +6,7 @@
 #    By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 20:23:28 by lraggio           #+#    #+#              #
-#    Updated: 2023/12/21 15:50:31 by lraggio          ###   ########.fr        #
+#    Updated: 2024/01/09 20:31:27 by lraggio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ SRCS = 	ft_print_char.c\
 	ft_print_pointer.c\
 	ft_print_decimal.c\
 	ft_print_un.c\
-	ft_print_x.c\
-	ft_print_X.c\
-	ft_print_percent.c\
+	ft_print_hexa.c\
+	ft_itoa_base.c\
+	ft_utoa_base.c\
 
 OBJS = $(SRCS:.c=.o)
 

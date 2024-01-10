@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:35:11 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/04 18:36:45 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/01/09 20:23:03 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_print_decimal(int dec)
 	char	*s;
 
 	i = 0;
-	str = ft_itoa_base(dec, 10, "0123456789");
+	s = ft_itoa_base(dec, 10, "0123456789");
 	i += ft_print_string(s);
 	free(s);
 	return (i);
