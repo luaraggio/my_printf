@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+         #
+#    By: lraggio <lraggio@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 20:23:28 by lraggio           #+#    #+#              #
-#    Updated: 2024/01/09 20:31:27 by lraggio          ###   ########.fr        #
+#    Updated: 2024/09/29 02:46:14 by lraggio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,33 +14,37 @@ NAME = libftprintf.a
 
 COMPILER = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
-SRCS = 	ft_print_char.c\
-	ft_printf.c\
-	ft_print_string.c\
-	ft_print_pointer.c\
-	ft_print_decimal.c\
-	ft_print_un.c\
-	ft_print_hexa.c\
-	ft_itoa_base.c\
-	ft_utoa_base.c\
+SRCS =	srcs/ft_itoa_base.c \
+		srcs/ft_print_char.c \
+		srcs/ft_print_decimal.c \
+		srcs/ft_print_hexa.c \
+		srcs/ft_print_pointer.c \
+		srcs/ft_print_string.c \
+		srcs/ft_print_un.c \
+		srcs/ft_utoa_base.c \
+		srcs/ft_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
-RM = rm -rf
+all:$(NAME)
+	@echo "✅ libft is ready to be used"
 
-all:	$(NAME)
-
-$(NAME):	$(OBJS)
-		ar -rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	$(COMPILER) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	rm -f $(OBJS)
+	@echo "📤 Objects deleted"
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
+	@echo "🧼 All cleaned"
 
 re:	fclean all
+
+val: re
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
 
 .PHONY: all clean fclean re

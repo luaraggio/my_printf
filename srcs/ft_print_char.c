@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_decimal.c                                 :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
+/*   By: lraggio <lraggio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 18:35:11 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 20:23:03 by lraggio          ###   ########.fr       */
+/*   Created: 2023/12/21 15:42:15 by lraggio           #+#    #+#             */
+/*   Updated: 2024/09/29 02:35:34 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_print_decimal(int dec)
+int	ft_print_char(char c)
 {
-	int		i;
-	char	*s;
-
-	i = 0;
-	s = ft_itoa_base(dec, 10, "0123456789");
-	i += ft_print_string(s);
-	free(s);
-	return (i);
+	write(1, &c, 1);
+	return (1);
 }

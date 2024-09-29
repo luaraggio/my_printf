@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
+/*   By: lraggio <lraggio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 21:19:00 by lraggio           #+#    #+#             */
-/*   Updated: 2024/01/09 22:57:13 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/09/29 02:46:31 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	convert_format(va_list args, char c)
 {
@@ -62,12 +62,3 @@ int	ft_printf(const char *s, ...)
 	return (len);
 }
 
-/*int main()
-{	
-	//int i;
-	//int a;
-
-	ft_printf("isso é um  %d ", 1);
-
-
-}*/
