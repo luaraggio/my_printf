@@ -6,7 +6,7 @@
 #    By: lraggio <lraggio@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 20:23:28 by lraggio           #+#    #+#              #
-#    Updated: 2024/09/29 02:46:14 by lraggio          ###   ########.fr        #
+#    Updated: 2024/12/13 17:35:10 by lraggio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,15 @@ COMPILER = cc
 
 CFLAGS = -Wall -Wextra -Werror -g
 
-SRCS =	srcs/ft_itoa_base.c \
-		srcs/ft_print_char.c \
-		srcs/ft_print_decimal.c \
-		srcs/ft_print_hexa.c \
-		srcs/ft_print_pointer.c \
-		srcs/ft_print_string.c \
-		srcs/ft_print_un.c \
-		srcs/ft_utoa_base.c \
-		srcs/ft_printf.c
+SRCS =	srcs/my_itoa_base.c \
+		srcs/my_print_char.c \
+		srcs/my_print_decimal.c \
+		srcs/my_print_hexa.c \
+		srcs/my_print_pointer.c \
+		srcs/my_print_string.c \
+		srcs/my_print_un.c \
+		srcs/my_utoa_base.c \
+		srcs/my_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
